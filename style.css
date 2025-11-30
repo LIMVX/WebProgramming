@@ -2,7 +2,7 @@
 
 /* Базовые стили */
 body {
-    background: #d8d8d8;
+    background: #f1f1f1;
     font-family: 'Lucida Grande','Lucida Sans Unicode',arial,verdana,sans-serif;
     margin: 0;
     padding: 0;
@@ -28,25 +28,24 @@ h1 {
     font: normal 2.5em Georgia, "Times New Roman", Times, serif;
     text-align: center;
     line-height: 60px;
-    text-transform: lowercase;
     letter-spacing: 2px;
-    width: 1200px; /* Такая же ширина как у таблицы */
+    width: 1400px; /* Такая же ширина как у таблицы */
 }
 
-/* Таблица */
 table {
-    width: 1200px; /* Увеличил ширину таблицы */
+    width: 1400px; /* Увеличил ширину таблицы до 1400px */
     border-collapse: collapse;
     margin: 0;
     background: #fff;
+    border: 4px solid #2e2d2d; /* Более выраженная граница */
 }
 
-/* Ячейки таблицы */
+/* Ячейки таблицы с выраженными границами */
 td {
-    border: 1px solid #bbb;
+    border: 4px solid #2e2d2d; /* Более выраженные границы */
     padding: 15px;
     vertical-align: top;
-    color: #666; /* Основной цвет текста */
+    color: #666;
 }
 
 /* Заголовки внутри таблицы */
@@ -74,22 +73,6 @@ li {
 ol[type="I"] {
     color: #666;
     font-style: italic;
-}
-
-/* Специальные маркеры для профессиональных навыков */
-td:nth-child(2) ul li {
-    background: url('bullet_design.gif') no-repeat 0 3px;
-    padding-left: 15px;
-    list-style: none;
-    margin-left: 0;
-}
-
-/* Специальные маркеры для опыта работы */
-td[colspan] ul li {
-    background: url('bullet_gen.gif') no-repeat 0 3px;
-    padding-left: 15px;
-    list-style: none;
-    margin-left: 0;
 }
 
 /* Ссылки */
@@ -163,7 +146,7 @@ td:nth-child(2) {
 
 /* Столбец с GitHub */
 td:nth-child(3) {
-    background: #b5b5b5;
+    background: #bbb;
 }
 
 /* Столбец с кнопками */
@@ -179,8 +162,7 @@ td:last-child {
 /* Объединенные ячейки - опыт работы (серая, не оранжевая) */
 td[colspan] {
     background: #e8e8e8 !important;
-    border: 2px solid #bbb;
-    color: #666 !important;
+    color: #000000 !important;
 }
 
 /* Особые стили для текста в черной ячейке */
@@ -257,6 +239,7 @@ td[colspan] {
     font-size: 11px;
     line-height: 1.5;
     text-align: justify;
+    color: #000 !important;
 }
 
 /* Особые акценты для rowspan ячеек */
@@ -268,3 +251,20 @@ td[rowspan] {
 td {
     border-color: #ccc;
 }
+
+/* НЕНУЖНОЕ */
+/* Специальные маркеры для профессиональных навыков
+td:nth-child(2) ul li {
+    background: url('bullet_design.gif') no-repeat 0 3px;
+    padding-left: 15px;
+    list-style: none;
+    margin-left: 0;
+}
+
+/* Специальные маркеры для опыта работы 
+td[colspan] ul li {
+    background: url('bullet_gen.gif') no-repeat 0 3px;
+    padding-left: 15px;
+    list-style: none;
+    margin-left: 0;
+} */
