@@ -1,0 +1,270 @@
+/* styles.css - адаптация CSS Zen Garden #035 для резюме */
+
+/* Базовые стили */
+body {
+    background: #f1f1f1;
+    font-family: 'Lucida Grande','Lucida Sans Unicode',arial,verdana,sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #666;
+}
+
+/* Основной контейнер */
+div {
+    width: 1200px; /* Увеличил ширину */
+    margin: 0 auto;
+    padding: 0;
+    background: #fff;
+    position: relative;
+}
+
+/* Заголовок h1 */
+h1 {
+    background: #9bec37;
+    color: #666;
+    height: 60px;
+    margin: 0;
+    border-bottom: 2px solid #fff;
+    font: normal 2.5em Georgia, "Times New Roman", Times, serif;
+    text-align: center;
+    line-height: 60px;
+    letter-spacing: 2px;
+    width: 1400px; /* Такая же ширина как у таблицы */
+}
+
+table {
+    width: 1400px; /* Увеличил ширину таблицы до 1400px */
+    border-collapse: collapse;
+    margin: 0;
+    background: #fff;
+    border: 4px solid #2e2d2d; /* Более выраженная граница */
+}
+
+/* Ячейки таблицы с выраженными границами */
+td {
+    border: 4px solid #2e2d2d; /* Более выраженные границы */
+    padding: 15px;
+    vertical-align: top;
+    color: #666;
+}
+
+/* Заголовки внутри таблицы */
+strong {
+    font: normal 1.2em Georgia, "Times New Roman", Times, serif;
+    color: #100b0a;
+    display: block;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Списки */
+ol, ul {
+    margin: 10px 0 15px 20px;
+    font-size: 11px;
+}
+
+li {
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+/* Римские цифры */
+ol[type="I"] {
+    color: #666;
+    font-style: italic;
+}
+
+/* Ссылки */
+a, a:link, a:visited {
+    color: #f90;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f90;
+    text-decoration: underline;
+}
+
+/* Кнопки */
+input[type="button"] {
+    font: 11px 'Lucida Grande','Lucida Sans Unicode',arial,verdana,sans-serif;
+    padding: 8px 12px;
+    background: #9bec37;
+    border: 1px solid #7bc429;
+    color: #100b0a;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="button"]:hover {
+    background: #7bc429;
+    border-color: #5a9a1f;
+}
+
+/* Выпадающие списки */
+select {
+    font: 11px 'Lucida Grande','Lucida Sans Unicode',arial,verdana,sans-serif;
+    padding: 6px 8px;
+    border: 1px solid #bbb;
+    background: #fff;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Изображения */
+img {
+    border: 2px solid #fff;
+    background: #dfdfdf;
+    display: block;
+    margin: 0 auto;
+    padding: 2px;
+}
+
+/* SVG иконка GitHub */
+svg {
+    display: block;
+    margin: 0 auto 10px auto;
+    filter: brightness(0.8);
+}
+
+/* Специфические стили для разных ячеек */
+
+/* Первый столбец - контакты и фотография (черный фон) */
+td:first-child {
+    background: #100b0a !important;
+    color: #fff !important;
+}
+
+/* Второй столбец - навыки (оранжевый фон) */
+td:nth-child(2) {
+    background: #f90 !important;
+    color: #fff !important;
+}
+
+/* Столбец с GitHub */
+td:nth-child(3) {
+    background: #bbb;
+}
+
+/* Столбец с кнопками */
+td:nth-child(4) {
+    background: #dfdfdf;
+}
+
+/* Последний столбец - персональные данные */
+td:last-child {
+    background: #f5f5f5;
+}
+
+/* Объединенные ячейки - опыт работы (серая, не оранжевая) */
+td[colspan] {
+    background: #e8e8e8 !important;
+    color: #000000 !important;
+}
+
+/* Особые стили для текста в черной ячейке */
+td:first-child,
+td:first-child strong,
+td:first-child li,
+td:first-child ol {
+    color: #fff !important;
+}
+
+/* Особые стили для текста в оранжевой ячейке */
+td:nth-child(2),
+td:nth-child(2) strong,
+td:nth-child(2) li {
+    color: #fff !important;
+}
+
+/* Заголовки в оранжевой ячейке */
+td:nth-child(2) strong {
+    color: #100b0a !important;
+}
+
+/* Заголовки в черной ячейке */
+td:first-child strong {
+    color: #f90 !important;
+}
+
+/* Заголовки в серой ячейке (опыт работы) */
+td[colspan] strong {
+    color: #100b0a !important;
+}
+
+/* Ссылки в черной ячейке */
+td:first-child a, 
+td:first-child a:link, 
+td:first-child a:visited {
+    color: #9bec37 !important;
+}
+
+td:first-child a:hover {
+    color: #7bc429 !important;
+}
+
+/* Декоративные элементы в стиле Zen Garden */
+table {
+    border: 2px solid #fff;
+}
+
+/* Адаптивность */
+@media (max-width: 1250px) {
+    div {
+        width: 95%;
+        margin: 10px auto;
+    }
+    
+    h1 {
+        width: 95%;
+        font-size: 2em;
+        height: 50px;
+        line-height: 50px;
+    }
+    
+    table {
+        width: 100%;
+    }
+    
+    td {
+        padding: 10px;
+    }
+}
+
+/* Стили для текстового контента */
+td[colspan] {
+    font-size: 11px;
+    line-height: 1.5;
+    text-align: justify;
+    color: #000 !important;
+}
+
+/* Особые акценты для rowspan ячеек */
+td[rowspan] {
+    background: inherit;
+}
+
+/* Границы для лучшей читаемости */
+td {
+    border-color: #ccc;
+}
+
+/* НЕНУЖНОЕ */
+/* Специальные маркеры для профессиональных навыков
+td:nth-child(2) ul li {
+    background: url('bullet_design.gif') no-repeat 0 3px;
+    padding-left: 15px;
+    list-style: none;
+    margin-left: 0;
+}
+
+/* Специальные маркеры для опыта работы 
+td[colspan] ul li {
+    background: url('bullet_gen.gif') no-repeat 0 3px;
+    padding-left: 15px;
+    list-style: none;
+    margin-left: 0;
+} */
